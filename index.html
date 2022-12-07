@@ -7,8 +7,115 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Hangman</title>
 </head>
+<style>
+
+.header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 33%;
+    margin-left: 34%;
+}
+.answer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    box-sizing: border-box;
+    width: 33%;
+    justify-content: center;
+    margin-left: 36%;
+    margin-top: 40px;
+}
+.soup {
+    border-bottom: solid thin black;
+    margin: 10px;
+    width: 33%;
+}
+.game {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.col1 {
+    width: 34%;
+}
+.letters {
+    color: white;
+    background-color: black;
+    margin: 5%;
+    text-align: left;
+    letter-spacing: 1.5rem;
+    line-height: 2rem;
+}
+h4 {
+    padding-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.guess {
+    height: 50px;
+    margin: 10%;
+    text-align: center;
+    justify-content: center;
+}
+button {
+    width: 150px;
+}
+.counter {
+    margin-left: 8%;
+}
+.hangman {
+}
+img {
+    height: 500px;
+    width: auto;
+}
+.win {
+    margin: auto;
+}
+.ngame {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 25%;
+    margin:auto;
+}
+</style>
 <body>
+    <h1 class="header">HANGMAN</h1>
+
+    <div class="answer">
+        <h2 class="soup">S</h2>
+        <h2 class="soup">O</h2>
+        <h2 class="soup">U</h2>
+        <h2 class="soup">P</h2>
+    </div>
+<div class="game">
+    <div class="col1">
+    <div class="letters">
+        <h4><strike>A</strike> B C <strike>D</strike> <strike>E</strike> F G H I J K L 
+            <strike>M</strike> N <strike>O</strike> <strike>P</strike> Q R 
+            <strike>S</strike> T <strike>U</strike> V W X Y Z</h4>
+        <div class="guess">
+            <button>GUESS</button>
+        </div>
+    </div>
+
+    <div class="counter">
+        <h3><strike>Remaining Guesses: 2</strike></h3>
+    </div>
+    </div>
+    <div class="hangman">
+        <img src="src/hangmanwin.png" alt="hangman with 2 guesses remaining">
+    </div>
     
+    <div class="win">
+        <h2> YOU WON!</h2>
+    </div>
+    <div class="ngame">
+        <h4>NEW GAME?<br>-CLICK HERE-</h4>
+    </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
