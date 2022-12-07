@@ -8,7 +8,9 @@
     <title>Hangman</title>
 </head>
 <style>
-
+.a4head {
+    text-align: center;
+}
 .header {
     background-color: black;
     color: white;
@@ -36,7 +38,7 @@
     grid-template-columns: 1fr 1fr;
 }
 .col1 {
-    width: 34%;
+    width: 45%;
 }
 .letters {
     color: white;
@@ -62,14 +64,15 @@ button {
 .counter {
     margin-left: 8%;
 }
-.hangman {
-}
 img {
     height: 500px;
-    width: auto;
+    width: 400px;
 }
 .win {
     margin: auto;
+    box-sizing: border-box;
+    margin: 3%;
+    padding-left: 5px;
 }
 .ngame {
     background-color: black;
@@ -77,11 +80,17 @@ img {
     text-align: center;
     padding-left: 5%;
     padding-right: 5%;
-    width: 25%;
-    margin:auto;
+    width: 40%;
+    box-sizing: border-box;
 }
+.ngame:hover {
+    text-decoration: underline;
+    background-color: rgb(73, 72, 72);
+    }
 </style>
 <body>
+    <p class="a4head">Jonah Martin, Jon McNamee<br>
+    Responsive Web Assignment #4: Hangman<br>Word to be guessed: SOUP</p>
     <h1 class="header">HANGMAN</h1>
 
     <div class="answer">
@@ -105,16 +114,16 @@ img {
         <h3><strike>Remaining Guesses: 2</strike></h3>
     </div>
     </div>
-    <div class="hangman">
+    <div class="col2">
         <img src="src/hangmanwin.png" alt="hangman with 2 guesses remaining">
+        <div class="win">
+            <h2> YOU WON!</h2>
+            <div class="ngame">
+                <h4>NEW GAME?<br>-CLICK HERE-</h4>
+            </div>
+        </div>
     </div>
     
-    <div class="win">
-        <h2> YOU WON!</h2>
-    </div>
-    <div class="ngame">
-        <h4>NEW GAME?<br>-CLICK HERE-</h4>
-    </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
