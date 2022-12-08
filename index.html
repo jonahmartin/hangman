@@ -21,6 +21,7 @@
 .answer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     text-align: center;
     box-sizing: border-box;
     width: 33%;
@@ -31,7 +32,9 @@
 .soup {
     border-bottom: solid thin black;
     margin: 10px;
-    width: 33%;
+    width: 20%;
+    box-sizing: border-box;
+    display: inline-block;
 }
 .game {
     display: grid;
@@ -67,12 +70,17 @@ button {
 img {
     height: 500px;
     width: 400px;
+    margin-left: -200px;
 }
 .win {
     margin: auto;
     box-sizing: border-box;
     margin: 3%;
     padding-left: 5px;
+}
+.win h2 {
+    position: relative;
+    margin-left: -105px;
 }
 .ngame {
     background-color: black;
@@ -82,10 +90,31 @@ img {
     padding-right: 5%;
     width: 40%;
     box-sizing: border-box;
+    margin-left: -200px;
 }
 .ngame:hover {
     text-decoration: underline;
     background-color: rgb(73, 72, 72);
+    }
+
+    @media screen and (max-device-width: 768px) {
+        .win {
+            margin-left:55%;
+        }
+        .ngame {
+            width: 100%;
+            margin-left: -125px;
+        }
+        .alphabet {
+            margin-left: -125px;
+            width: 100%;
+        }
+        .counter {
+            margin-left: -125px;
+        }
+        .answer {
+            margin-left: -50px;
+        }
     }
 </style>
 <body>
@@ -93,15 +122,23 @@ img {
     Responsive Web Assignment #4: Hangman<br>Word to be guessed: SOUP</p>
     <h1 class="header">HANGMAN</h1>
 
-    <div class="answer">
+    <div class="answer d-none d-md-block">
         <h2 class="soup">S</h2>
         <h2 class="soup">O</h2>
         <h2 class="soup">U</h2>
         <h2 class="soup">P</h2>
     </div>
+
+    <div class="win d-lg-none d-md-none d-md-none">
+        <h2> YOU WON!</h2>
+        <div class="ngame d-lg-none d-md-none d-md-none">
+            <h4>NEW GAME?<br>-CLICK HERE-</h4>
+        </div>
+    </div>    
+
 <div class="game">
     <div class="col1">
-    <div class="letters">
+    <div class="letters d-none d-md-block">
         <h4><strike>A</strike> B C <strike>D</strike> <strike>E</strike> F G H I J K L 
             <strike>M</strike> N <strike>O</strike> <strike>P</strike> Q R 
             <strike>S</strike> T <strike>U</strike> V W X Y Z</h4>
@@ -110,15 +147,36 @@ img {
         </div>
     </div>
 
-    <div class="counter">
+    <div class="counter d-none d-md-block">
         <h3><strike>Remaining Guesses: 2</strike></h3>
     </div>
     </div>
     <div class="col2">
         <img src="src/hangmanwin.png" alt="hangman with 2 guesses remaining">
-        <div class="win">
+
+        <div class="answer d-lg-none d-md-none d-md-none">
+            <h2 class="soup">S</h2>
+            <h2 class="soup">O</h2>
+            <h2 class="soup">U</h2>
+            <h2 class="soup">P</h2>
+        </div>
+
+        <div class="col12 alphabet">
+            <div class="letters d-lg-none d-md-none d-md-none">
+                <h4><strike>A</strike> B C <strike>D</strike> <strike>E</strike> F G H I J K L 
+                    <strike>M</strike> N <strike>O</strike> <strike>P</strike> Q R 
+                    <strike>S</strike> T <strike>U</strike> V W X Y Z</h4>
+                <div class="guess">
+                    <button>GUESS</button>
+                </div>
+            </div>
+        </div>
+        <div class="counter d-lg-none d-md-none d-md-none">
+            <h3><strike>Remaining Guesses: 2</strike></h3>
+        </div>
+        <div class="win d-none d-md-block">
             <h2> YOU WON!</h2>
-            <div class="ngame">
+            <div class="ngame d-none d-md-block">
                 <h4>NEW GAME?<br>-CLICK HERE-</h4>
             </div>
         </div>
