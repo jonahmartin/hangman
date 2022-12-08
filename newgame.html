@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Hangman</title>
+</head>
+<style>
+.a4head {
+    text-align: center;
+}
+.header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 33%;
+    margin-left: 34%;
+}
+.answer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    box-sizing: border-box;
+    width: 33%;
+    justify-content: center;
+    margin-left: 36%;
+    margin-top: 40px;
+}
+.soup {
+    border-bottom: solid thin black;
+    margin: 10px;
+    width: 20%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.game {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.col1 {
+    width: 45%;
+}
+.letters {
+    color: white;
+    background-color: black;
+    margin: 5%;
+    text-align: left;
+    letter-spacing: 1.5rem;
+    line-height: 2rem;
+}
+h4 {
+    padding-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.guess {
+    height: 50px;
+    margin: 10%;
+    text-align: center;
+    justify-content: center;
+}
+button {
+    width: 150px;
+}
+.counter {
+    margin-left: 8%;
+}
+img {
+    height: 500px;
+    width: 400px;
+    margin-left: -200px;
+}
+.win {
+    margin: auto;
+    box-sizing: border-box;
+    margin: 3%;
+    padding-left: 5px;
+}
+.win h2 {
+    position: relative;
+    margin-left: -105px;
+}
+.ngame {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 40%;
+    box-sizing: border-box;
+    margin-left: -200px;
+}
+.ngame:hover {
+    text-decoration: underline;
+    background-color: rgb(73, 72, 72);
+    }
+
+    @media screen and (max-device-width: 768px) {
+        .win {
+            margin-left:55%;
+        }
+        .ngame {
+            width: 100%;
+            margin-left: -125px;
+        }
+        .alphabet {
+            margin-left: -125px;
+            width: 100%;
+        }
+        .counter {
+            margin-left: -125px;
+        }
+        .answer {
+            margin-left: -50px;
+        }
+        .soup {
+            width: 40px;
+        }
+    }
+</style>
+<body>
+    <p class="a4head">Jonah Martin, Jon McNamee<br>
+    Responsive Web Assignment #4: Hangman<br>Word to be guessed: SOUP</p>
+    <h1 class="header">HANGMAN</h1>
+
+    <div class="answer d-none d-md-block">
+        <h2 class="soup"></h2>
+        <h2 class="soup"></h2>
+        <h2 class="soup"></h2>
+        <h2 class="soup"></h2>
+    </div>
+
+    <div class="win d-lg-none d-md-none d-md-none">
+        <h2>NEW GAME</h2>
+    </div>    
+
+<div class="game">
+    <div class="col1">
+    <div class="letters d-none d-md-block">
+        <h4>A B C D E F G H I J K L 
+            M N O P Q R 
+            S T U V W X Y Z</h4>
+        <div class="guess">
+            <button>GUESS</button>
+        </div>
+    </div>
+
+    <div class="counter d-none d-md-block">
+        <h3>Remaining Guesses: 6</h3>
+    </div>
+    </div>
+    <div class="col2">
+        <img src="src/newgame.png" alt="new hangman game">
+
+        <div class="answer d-lg-none d-md-none d-md-none">
+            <h2 class="soup"></h2>
+            <h2 class="soup"></h2>
+            <h2 class="soup"></h2>
+            <h2 class="soup"></h2>
+        </div>
+
+        <div class="col12 alphabet">
+            <div class="letters d-lg-none d-md-none d-md-none">
+                <h4>A B C D E F G H I J K L 
+                    M N O P Q R 
+                    S T U V W X Y Z</h4>
+                <div class="guess">
+                    <button>GUESS</button>
+                </div>
+            </div>
+        </div>
+        <div class="counter d-lg-none d-md-none d-md-none">
+            <h3>Remaining Guesses: 6</h3>
+        </div>
+        <div class="win d-none d-md-block">
+            <h2>NEW GAME</h2>
+        </div>
+    </div>
+    
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
